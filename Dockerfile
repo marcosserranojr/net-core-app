@@ -6,7 +6,7 @@ ENV ASPNETCORE_URLS=http://*:8080
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 COPY ["netcore3.csproj", "./"]
-RUN dotnet restore "netcore.csproj"
+RUN dotnet restore "netcore3.csproj"
 COPY . .
 WORKDIR "/src/."
 RUN dotnet build "netcore3.csproj" -c Release -o /app/build
