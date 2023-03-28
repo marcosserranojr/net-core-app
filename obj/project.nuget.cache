@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UxW3kZK0Ww7Wqzjzygw6jVo8J/mjWWY55SB2EzHwTFjgtv/sWcC89o6iFyswngA0NN0yiNwKGqk2CnEFNY+nrQ==",
+  "success": true,
+  "projectFilePath": "C:\\CODE\\MSCore\\Net-Core-3-app\\netcore3.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vaaacserram\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+  ],
+  "logs": []
+}
