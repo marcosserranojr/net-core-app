@@ -45,14 +45,14 @@
                 "build"
             ],
             "dockerBuild": {
-                "tag": "demorefdoc:dev",
+                "tag": "netcoreapp:dev",
                 "target": "base",
                 "dockerfile": "${workspaceFolder}/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/netcore3.csproj"
+                "appProject": "${workspaceFolder}/netcore8.csproj"
             }
         },
         {
@@ -62,13 +62,17 @@
                 "build"
             ],
             "dockerBuild": {
-                "tag": "demorefdoc:latest",
+                "tag": "netcoreapp:latest",
                 "dockerfile": "${workspaceFolder}/Dockerfile",
                 "context": "${workspaceFolder}",
+                "platform": {
+                    "os": "linux",
+                    "architecture": "amd64"
+                },
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/netcore3.csproj"
+                "appProject": "${workspaceFolder}/netcore8.csproj"
             }
         },
         {
@@ -79,7 +83,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/netcore3.csproj",
+                "appProject": "${workspaceFolder}/netcore8.csproj",
                 "enableDebugging": true
             }
         },
@@ -91,7 +95,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/netcore3.csproj"
+                "appProject": "${workspaceFolder}/netcore8.csproj"
             }
         }
     ]
