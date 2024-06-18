@@ -1,11 +1,13 @@
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+#FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+FROM mcr.microsoft.com/dotnet/sdk:8.0-bullseye-slim AS base
 WORKDIR /app
 EXPOSE 8080
 
-ENV ASPNETCORE_URLS=http://+:8080
+#ENV ASPNETCORE_URLS=http://+:8080
 
 USER app
-FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+#FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0-bullseye-slim AS build
 ARG configuration=Release
 WORKDIR /src
 COPY ["netcore8.csproj", "./"]
